@@ -1,0 +1,248 @@
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+.image-tile:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.image-tile {
+  break-inside: avoid;
+  position: relative;
+  width: 300px;
+  height: auto;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--tile-shadow);
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
+}
+.my-masonry-grid {
+  display: flex;
+  margin-left: -16px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 16px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.tile-img {
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.tile-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-color);
+  border-radius: 0px 0px 12px 12px;
+
+  color: var(--dMode-text-color);
+}
+
+.tile-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.tile-like {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.searchPage {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.searchHeader {
+  display: flex;
+  align-items: center;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.searchLogo {
+  width: 4cm;
+}
+
+.searchTitle {
+  font-size: 24px;
+  margin: 0;
+}
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 30px 40px;
+}
+.loading-spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #282c34;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.searchHeader {
+  display: flex;
+  align-items: center;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  padding: 10px 20px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+:root {
+  --header-bg: #282c34;
+  --text-color: #ffffff;
+  --dMode-text-color: #121212;
+  --bg-color: #f5f5f5;
+  --tile-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  --header-bg: #1a1a1a;
+  --dMode-text-color: #f0f0f0;
+  --text-color: #f0f0f0;
+  --bg-color: #121212;
+  --tile-shadow: rgba(247, 206, 3, 0.849);
+}
+
+.searchPage {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.searchInput {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--dMode-text-color);
+}
+.darkToggle {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .searchHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .tile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchLogo {
+    width: 3cm;
+  }
+
+  .darkToggle {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.searchInput:focus {
+  outline: none;
+  border-color: #282c34;
+}
+.imagePageToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pageNum {
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #eeeeee;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pageNum:hover {
+  background-color: #df4a1d;
+  color: white;
+}
+
+.activePage {
+  background-color: #f7ce03;
+  color: white;
+  font-weight: bold;
+}
+
+.imagePageToggle button {
+  padding: 6px 14px;
+  background-color: #f7ce03;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imagePageToggle button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

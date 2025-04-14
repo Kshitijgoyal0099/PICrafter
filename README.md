@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# PICrafter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PICrafter is a React-based web application that allows users to search, view, and edit images. It provides a seamless experience for image crafting with features like search functionality, image editing, and dark mode support.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search Images**: Search for stunning images using the Unsplash API.
+- **View Image Details**: View detailed information about an image, including the photographer's name, dimensions, and likes.
+- **Edit Images**: Add text, shapes, and customize images using the Fabric.js library.
+- **Dark Mode**: Toggle between light and dark themes for a personalized experience.
+- **Responsive Design**: Fully responsive design for desktop and mobile devices.
 
-### `npm start`
+## File Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Home Page (Light Mode)
+![Home Page (Light Mode)](ScreenshotsForReadMe\HomePageLight.png)
 
-### `npm test`
+### Home Page (Dark Mode)
+![Home Page (Dark Mode)](ScreenshotsForReadMe\HomePageDark.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Search Page (Light Mode)
+![Search Page (Light Mode)](ScreenshotsForReadMe\SearchPageLight.png)
 
-### `npm run build`
+### Search Page (Dark Mode)
+![Search Page (Dark Mode)](ScreenshotsForReadMe\SearchPageDark.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Image Details Page (Light Mode)
+![Image Details Page (Light Mode)](ScreenshotsForReadMe\DisplayPageLight.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ ### Image Details Page (Dark Mode)
+![Image Details Page (Dark Mode)](ScreenshotsForReadMe\DisplayPageDark.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Edit Image Page (Light Mode)
+![Edit Image Page (Light Mode)](ScreenshotsForReadMe\EditPageLight.png)
 
-### `npm run eject`
+### Edit Image Page (Dark Mode)
+![Edit Image Page (Dark Mode)](ScreenshotsForReadMe\EditPageDark.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### About Page
+![About Page](ScreenshotsForReadMe\AboutPage.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Contact Page
+![Contact Page](ScreenshotsForReadMe\ContactPage.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Node.js (v16 or higher)
+- npm or yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
+   
+   ```sh
+   git clone https://github.com/your-username/picrafter.git
+   cd picrafter
+   ```
+2. Install dependencies:
 
-### Code Splitting
+    ```
+    npm install
+    ```
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1.  Start the development Server:
+```
+npm start
+```
 
-### Analyzing the Bundle Size
+2. Open your browser and navigate to [http://localhost:3000]( http://localhost:3000)
+    Building for Production
+    To create a production build, run:
+```
+npm run build
+```
+The build files will be generated in the [build/] directory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Integration
+This project uses the Unsplash API for fetching images. To use the API, you need to replace the client_id in the [src/components/searchPage/search.js] file with your own Unsplash API key.
 
-### Making a Progressive Web App
+## Deployment
+You can deploy the application to any static hosting service like Netlify, Vercel, or GitHub Pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.

@@ -1,0 +1,51 @@
+.img-Logo {
+  width: 5cm;
+}
+
+.homeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerButton {
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #f7ce03;
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+  transform-origin: center;
+}
+
+.headerButton:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.Active {
+  background-color: #61656d;
+  color: #14d08e;
+}
+.headerButton:link,
+.headerButton:visited,
+.headerButton:active,
+.headerButton:hover {
+  text-decoration: none;
+}

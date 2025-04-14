@@ -1,0 +1,160 @@
+:root {
+  --bg: #ffffff;
+  --htext: #1e2a3a;
+  --descText : #555;
+  --logo-shadow: drop-shadow(0 0 5px #262626);
+}
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --htext: #ffffff;
+  --descText : #cfcfcf;
+  --logo-shadow:  drop-shadow(0 0 5px #f7ce03);
+}
+
+.homePage {
+  min-height: 90vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeBody {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.textContent {
+  max-width: 600px;
+}
+
+.mainHeading {
+  font-size: 48px;
+  color: var(--htext);
+  margin-bottom: 10px;
+}
+
+.mainHeading span {
+  color: #f7ce03;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 20px;
+  color: var(--descText);
+  margin-bottom: 30px;
+}
+
+.homeSearchBar {
+  margin-top: 20px;
+}
+.description {
+  font-size: 18px;
+  color: var(--descText);
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 12px;
+  font-size: 16px;
+  width: 280px;
+  margin-right: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #f7ce03;
+  outline: none;
+}
+
+.searchButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #1d1f26;
+  transform: scale(1.05);
+}
+
+.imageShowcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeImage {
+  height: 250px;
+  animation: float 3s ease-in-out infinite;
+  /* text-shadow: #f7ce03 0px 0px 10px; */
+  filter: var(--logo-shadow);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.bounce {
+  animation: bounce 4s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.modeToggleBtn {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: var(--bg);
+  color: var(--text);
+  /* border: 2px solid var(--text); */
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px 12px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s, color 0.3s, transform 0.2s ease;
+}
+
+.modeToggleBtn:hover {
+  transform: scale(1.1);
+}
