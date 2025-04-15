@@ -1,5 +1,6 @@
 .img-Logo {
   width: 5cm;
+  max-width: 150px;
 }
 
 .homeHeader {
@@ -14,12 +15,13 @@
   top: 0;
   z-index: 999;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
 }
 
 .headerContent {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   gap: 20px;
 }
 
@@ -48,4 +50,36 @@
 .headerButton:active,
 .headerButton:hover {
   text-decoration: none;
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #282c34;
+    padding-top: 10px;
+  }
+
+  .headerContent.show {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
 }
