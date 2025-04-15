@@ -30,13 +30,13 @@ function Home() {
       
       <div className="homeBody fade-in">
         <div className="textContent">
-          <h1 className="mainHeading">
-            Welcome to <span>PICrafter</span>
-          </h1>
-          <p className="tagline">Your one-stop solution for image crafting</p>
-          <p className="description">
+          <div className="mainHeading">
+            <>Welcome to</> <span>PICrafter</span>
+          </div>
+          <div className="tagline">Your one-stop solution for image crafting</div>
+          <div className="description">
             Explore our features and start creating stunning images today!
-          </p>
+          </div>
           <div className="imageShowcase">
             <img src={imgLogo} className="homeImage bounce" alt="PICrafter" />
           </div>

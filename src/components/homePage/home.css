@@ -37,6 +37,7 @@
   font-size: 48px;
   color: var(--htext);
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .mainHeading span {
@@ -157,4 +158,120 @@
 
 .modeToggleBtn:hover {
   transform: scale(1.1);
+}
+
+
+@media (max-width: 1024px) {
+  .textContent{
+    max-width: 90%;
+  }
+  .mainHeading {
+    font-size: 40px;
+    font-weight: bold;
+
+    
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .homeImage {
+    height: 200px;
+  }
+
+  .searchInput {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textContent{
+    max-width: 90%;
+  }
+  .homeBody {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .mainHeading {
+    font-size: 36px;
+  }
+
+  .tagline {
+    font-size: 17px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .homeImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .searchInput {
+    width: 220px;
+    margin-bottom: 10px;
+  }
+
+  .homeSearchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchButton {
+    width: 220px;
+  }
+
+  .modeToggleBtn {
+    top: 80px;
+    right: 15px;
+    padding: 8px 10px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContent{
+    max-width: 90%;
+  }
+  .mainHeading {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .mainHeading span {
+    font-size: 40px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+    text-wrap: normal;
+  }
+
+  .searchInput,
+  .searchButton {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .modeToggleBtn {
+    top: 70px;
+    right: 10px;
+    padding: 6px 8px;
+    font-size: 16px;
+  }
 }
